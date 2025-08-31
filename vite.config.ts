@@ -10,4 +10,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  preview: {
+    host: true,          // allows access from network
+    port: 3011,          // or your custom port
+    allowedHosts: ['*'], // ✅ allow all hosts
+  },
 })
