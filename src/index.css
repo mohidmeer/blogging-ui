@@ -1,5 +1,4 @@
-
-@import "tailwindcss" important ;
+@import "tailwindcss" important;
 
 
 @plugin "tailwindcss-animate";
@@ -124,7 +123,7 @@
     font-family: inherit !important;
     line-height: normal !important;
   }
-  
+
   #auto-blogger p,
   #auto-blogger h1,
   #auto-blogger h2,
@@ -135,35 +134,38 @@
   #auto-blogger blockquote {
     margin: 0 !important;
     padding: 0 !important;
-    
+
   }
 
-  
- .modals > h1,h2,p {
-  margin: 0 !important;
- }
+
+  .modals>h1,
+  h2,
+  p {
+    margin: 0 !important;
+  }
 
 
-  
+
 
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
-  
+
   .input {
 
-    @apply bg-white border border-border text-foreground font-semibold py-2 px-4 rounded-md shadow-sm  focus:ring-2 focus:ring-primary focus:outline-none outline-0
+    @apply bg-white border border-border text-foreground font-semibold py-2 px-4 rounded-md shadow-sm focus:ring-2 focus:ring-primary focus:outline-none outline-0
   }
 
-  .input-sm{
-    @apply !py-1 !px-2 !text-sm  !shadow-none
+  .input-sm {
+    @apply !py-1 !px-2 !text-sm !shadow-none
   }
-  
- 
-  
+
+
+
 }
 
 
@@ -172,3 +174,27 @@
   @apply !ring-red-400
 }
 
+/* Modern scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
